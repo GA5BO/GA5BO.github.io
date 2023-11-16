@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fde9eb;
+            color: #333;
+        }
+
+        header {
+            background-color: #f583bc;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .container {
+            width: calc(33.33% - 20px); 
+            margin: 10px;
+            float: left;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-top: 10px;
+        }
+
+        .category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ff008c;
+            background: none;
+            border: none;
+            border-radius: 5px;
+            transition: color 0.3s;
+        }
+        
+        .button:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Favorites</h1>
+    </header>
+
+    <div class="container" id="sport">
+        <h2>Sport</h2>
+        <div class="category">
+            <img src="basketball.jpg" alt="Sport">
+        </div>
+    </div>
+
+    <div class="container" id="movie">
+        <h2>Movie</h2>
+        <div class="category">
+            <img src="movie.jpg" alt="Movie">
+        </div>
+    </div>
+
+
+
+    <div class="container" id="singer">
+        <h2>Singer</h2>
+        <div class="category">
+            <img src="singer.jpg" alt="Singer">
+        </div>
+    </div>
+
+    <div class="container" id="book">
+        <h2>Book</h2>
+        <div class="category">
+            <img src="book.jpg" alt="Book">
+        </div>
+    </div>
+
+    <div class="container" id="actress">
+        <h2>Actress</h2>
+        <div class="category">
+            <img src="actress.jpg" alt="Actress">
+        </div>
+    </div>
+
+    <div class="container" id="actor">
+        <h2>Actor</h2>
+        <div class="category">
+            <img src="actor.jpg" alt="Actor">
+        </div>
+    </div>
+
+    <div class="container" id="drink">
+        <h2>Drink</h2>
+        <div class="category">
+            <img src="drink.jpg" alt="Drink">
+        </div>
+    </div>
+
+    <div class="container" id="subject">
+        <h2>Subject</h2>
+        <div class="category">
+            <img src="subject.jpg" alt="Subject">
+        </div>
+    </div>
+
+    <div class="container" id="food">
+        <h2>Food</h2>
+        <div class="category">
+            <img src="food.jpg" alt="Food">
+        </div>
+    </div>
+
+
+    
+    <div class="container" id="back-button">
+        <a href="midterm.html" class="button">Back</a>
+    </div>
+
+</body>
+
+</html>
+
+

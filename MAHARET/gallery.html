@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f2; 
+            color: #333;
+        }
+
+        header {
+            background-color: #ff3399; 
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #ff3399; 
+            color: #fff;
+        }
+
+       
+        .container {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        .button {
+            background-color: #ff3399; 
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #e60073;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gallery</h1>
+    </header>
+
+    <nav>
+        <a onclick="showCategory('selfies')">Selfies & Pictures</a>
+        <a onclick="showCategory('family')">My Family</a>
+        <a onclick="showCategory('friends')">Friends</a>
+        <a onclick="showCategory('school')">School</a>
+    </nav>
+
+    <section class="gallery" id="gallery">
+        <img src="image.jpg" alt="image1">
+        <img src="image2.jpg" alt="Image2">
+        <img src="image3.jpg" alt="Image2">
+    </section>
+    
+
+    <div class="container" id="back-button">
+        <a href="midterm.html" class="button">Back</a>
+    </div>
+
+
+
+    <script>
+        function showCategory(category) {
+            const gallerySection = document.getElementById('gallery');
+            gallerySection.innerHTML = ''; 
+
+         
+            const imagePaths = {
+                selfies: ["selfie1.jpg", "selfie2.jpg", "selfie3.jpg", "selfie4.jpg"],
+                family: ["family1.jpg", "family2.jpg", "family3.jpg"],
+                friends: ["friends1.jpg", "friends2.jpg", "friends4.jpg"],
+                school: ["school1.jpg", "school2.jpg"],
+            };
+
+            const images = imagePaths[category];
+
+            if (images) {
+                images.forEach((imagePath) => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imagePath;
+                    imgElement.alt = category;
+                    gallerySection.appendChild(imgElement);
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
